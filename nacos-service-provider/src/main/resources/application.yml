@@ -1,0 +1,20 @@
+server:
+  port: 8760
+
+spring:
+  application:
+    name: nacos-service-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+# 如果不想使用 Nacos 作为您的服务注册与发现，可以将 spring.cloud.nacos.discovery 设置为 false。
+
+
+logging:
+  pattern:
+    console: "%red(%date{dd HH:mm:ss.SSS}) %green([%thread]) %highlight(%-5level) %cyan([%logger{36}:%-4.4line]) - %boldMagenta(%msg%n)"
+
+debug: false
+
